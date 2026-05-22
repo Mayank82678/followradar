@@ -15,7 +15,7 @@ export async function POST(request: Request) {
       amount,
       currency: 'INR',
       receipt: `followradar_subscription_${Date.now()}`,
-      payment_capture: 1,
+      payment_capture: true,
     });
 
     return NextResponse.json({ success: true, order });
